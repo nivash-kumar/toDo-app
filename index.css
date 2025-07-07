@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --primery-font-color:red;
+    --secondary-font-color:blue;
+    --primery-bg-color: black;
+    --secondary-bg-color:rgba(51, 3, 68, 0.985);
+    --large-font:30px;
+    --small-font:14px;
+    --normal-font:20px;
+    --button-bg:green;
+    --button-bg2:rgb(209, 43, 21);
+    --disable-bg:rgb(89, 89, 89);
+}
+.a-pointer{
+    text-decoration: none;
+    cursor:pointer;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hover{
+    &:hover{
+        background-color: var(--button-bg);
+        font-size: 1.2em;
+    }
+}
+body{
+    background-color: aquamarine;
+}
+nav{
+    justify-content: space-around;
+    padding:5px;
+    background-color:var(--primery-bg-color);
+    border-bottom: 2px solid ;
+    /* border-opacity: .3; */
+    border-color: var(--secondary-bg-color);
+    position:sticky;
+    top:0;
+    z-index: 1000;
+    box-shadow: 0 8px 5px rgba(0,0,0,0.1);
+}
+.logo{
+    margin-left:5vw;
+    font-size: var(--large-font);
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    color:beige;
+    border-bottom-color: var(--secondary-font-color);
+    border-left-color:green ;
+    border-bottom:4px solid red ;
+    border-radius: 50%;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 1);
+    border-left:2px solid var(--secondary-font-color);
+    border-right:2px solid var(--secondary-font-color);
+}
+.logoParent a{
+    display: inline-block;
+}
+.main{
+    position: relative;
+}
+.manu div{
+    margin-right:5vw;
+    margin:auto var(--large-font);
+    cursor:pointer;
+}
+select{
+    background-color: black;
+    /* display: none; */
+    padding: auto 10px;
+    display:none;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+.fixed-bg{
+    position:fixed;
+    width: 100vw;
+    min-height: 100vh;
+    opacity: .3;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+.timeAndDate div{
+    font-size: 10vw;
+    font-weight: 600;
+    color:rgb(31, 1, 1);
+    text-shadow:-5px -4px rgba(76, 27, 27, 0.7);
+    text-align: center;
+    cursor:default;
+    pointer-events: none;
+}
+
+/*section 2 */
+#main-page{
+    z-index:100;
+}
+.task-box{
+    min-height:60vh ;
+    width: 60vw;
+    min-width: 300px;
+    border: 5px solid gray;
+    border-radius: 20px;
+    margin:30px auto;
+    box-shadow: -10px -8px 40px inset rgba(60, 48, 48, 0.7);
+}
+.task-add-box{
+    margin-top: 20px;
+    min-height: 7vh;
+    justify-content: center;
+    & input{
+        background-color: transparent;
+        height: 100%;
+        padding:10px 20px;
+        border:none;
+        border:3px solid var(--button-bg);
+        border-radius:20px 0 0 20px;
+        
+        border-right:none;
+    }
+    & .submit{
+        background-color: var(--button-bg);
+        cursor:pointer;
+        height: 100%;
+        padding: 10px;
+        margin-right:0;
+        border-radius:0 20px 20px 0;
+        border:3px solid var(--button-bg);
+        border-left:none;
+    }
+}
+.task-heading{
+    font-size: var(--large-font);
+    color:var(--secondary-bg-color);
+    text-align: center;
+    text-shadow: 0 0 8px rgba(76, 27, 27, 0.7);
+    border-bottom: 1px solid darkgray;
+}
+
+.task{
+    flex-wrap: nowrap;
+    
+    margin: 10px 30px;
+    & p{
+        color:black;
+        font-size:var(--normal-font) ;
+        font-weight: 500;
+        
+    }
+    & div{
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    & .task-check{
+        height: 20px;
+        width: 20px;
+        margin: 10px;
+        cursor: pointer;
+        
+        
+        &:checked{
+            background-color: green;
+        }
+    }
+    & .task-btn{
+        background-color: var(--button-bg2);
+        color:black;
+        border:2px solid maroon;
+        border-radius:30px;
+        padding:7px 8px;
+        font-size: var(--small-font);
+        font-weight: 600;
+        cursor: pointer;
+
+    }
+}
+
+footer{
+    width: 100%;
+    height: 25vh;
+    border-top: 2px solid var(--secondary-bg-color);
+    background-color: rgba(0, 0, 0, 0.692);
+}
+footer div p{
+    display:inline flex;
+    margin: 10px 0 auto 60vw;
+    text-align: end;
+    color:black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border:2px solid red;
+    border-radius: 50%;
+    border-top:none;
+    border-left:none;
+}
+footer p{
+    color:black;
+    padding:10px;
+}
+
+
+.disabled-btn{
+    background-color: var(--disable-bg)!important;
+    pointer-events: none;
+    text-decoration: line-through;
+    cursor:none;
+}
+button:hover{
+    background-color: bisque !important;
+    color: green !important;
+}
+
+.task .taskTime{
+    display:none;
+}
+.TSD{
+    color: green;
+    /* font-size: var(--large-font); */
+}
+
+@media screen and (max-width:800px){
+    .manu-div{
+        display:none;
+        background-color: aliceblue;
+    }
+    .manu-select{
+        display:flex;
+    }
+    .TSD{
+        color: green;
+        font-size: var(--small-font);
+    }
+}
+@media screen and (max-width:500px){
+    .logo{
+        margin-left:5vw;
+        font-size: var(--normal-font);
+        font-weight: 700;
+        text-align: center;
+        height: 30px;
+        width: 100px;
+        border-bottom:2px solid red ;
+        border-radius: 50%;
+        border-left:1px solid var(--secondary-font-color);
+        border-right:1px solid var(--secondary-font-color);
+    }
+    .manu{
+        margin-right:5vw;
+        margin:auto var(--normal-font);
+        font-size: var(--small-font);
+    }
+    .task-add-box{
+        margin-top: 20px;
+        min-height: 5vh;
+        & input{
+            height: 100%;
+            padding:5px 10px;
+        }
+        & .taskAddBtn{
+            height:80%;
+            padding:5px;
+            margin-right:0;
+            &:hover{
+                background-color: darkcyan;
+            }
+        }
+    }
+        /* .taskAddBtn:hover{
+        background-color: darkcyan;
+        color: bisque;
+    } */
+    .task p{
+        font-size:var(--small-font);
+    }
+    .task button{
+        font-size: 8px;
+        font-weight: 400;
+        padding: 3px;
+
+    }
+    
+}

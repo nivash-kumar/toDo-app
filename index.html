@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="flex">
+        <div class="logoParent">
+            <a href="/#" class="logo a-pointer ">ToDo</a>
+        </div>
+        <div class="manu manu-div flex">
+            <div class="manuIcon add"><a class="a-pointer" href="/#">Add</a></div>
+            <div class="manuIcon"><a class="a-pointer" href="/#">Update</a></div>
+            <div class="manuIcon"><a class="a-pointer" href="/#">Remove</a></div>
+            <div class="manuIcon"><a class="a-pointer" href="/#">Help</a></div>
+            <div class="manuIcon"><a class="a-pointer" href="/#">BackUp</a></div>
+        </div>
+
+        <label for="manu-select"></label>
+        <select id="manu-select" class="manu manu-select">
+            <option value="add" class="add" type="button">Add</option>
+            <option value="update" type="button">Update</option>
+            <option value="remove" type="button">Remove</option>
+            <option value="help" type="button">Help</option>
+            <option value="backup" type="button">BackUp</option>
+
+        </select>
+
+    </nav>
+
+    <main>
+        <section class="fixed-bg flex">
+            <!-- //this is black seded colect time and date -->
+            <div class="timeAndDate">
+                <div class="time">
+                    <!-- 00:00 Am -->
+                </div>
+                <div class="date">
+                    <!-- 00:00:0000  -->
+                </div>
+                <div class="day">
+                    <!-- Wed -->
+                </div>
+            </div>
+        </section>
+        
+        <section id="main-page">
+            <div class="task-add-box flex">
+                <input type="text" id="add-task" class="add-task" placeholder="Enter your new tasks.">
+                <button id="add-task-btn" class="submit taskAddBtn">submit</button>
+            </div>
+            <div class="task-box">
+                <h1 class="task-heading">Tasks</h1>
+                <ul class="tasks">
+                    <li class="task flex">
+                        <p>Are U eat today?</p>
+                        <div class="task-work">
+                            <input type="checkbox" name="task-check" class="task-check">
+                            <button class="task-btn">Delete</button>
+                        </div>
+                        <div class="taskTime TSD">this is time box</div>
+                    </li>
+                    <li class="task flex">
+                        <p>Now ear first plese!</p>
+                        <div class="task-work">
+                            <input type="checkbox" name="task-check" class="task-check">
+                            <button class="task-btn">Delete</button>
+                            <div class="taskTime TSD">this is time box</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Thanks for using this ToDo</p>
+        <div>
+            <p>-Singh Kn</p>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
